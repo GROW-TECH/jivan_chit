@@ -1,0 +1,194 @@
+@import "tailwindcss";
+
+@media print {
+  @page {
+    size: auto;
+    margin: 6mm 4mm;
+  }
+
+  /* Unconditionally hide all navigation, sidebars, app headers, and action buttons */
+  header,
+  nav,
+  aside,
+  #mobile-bottom-nav,
+  .print\:hidden,
+  th.print\:hidden,
+  td.print\:hidden,
+  button:not(.print\:show) {
+    display: none !important;
+  }
+
+  /* Prevent scrollbars from rendering on paper */
+  .overflow-x-auto,
+  .overflow-y-auto,
+  .overflow-hidden {
+    overflow: visible !important;
+  }
+
+  /* Professional accounting ledger borders for print */
+  .report-table-print {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    border: 1.5px solid #0f172a !important;
+  }
+
+  .report-table-print th,
+  .report-table-print td {
+    border: 1px solid #cbd5e1 !important;
+  }
+
+  .report-table-print th {
+    background-color: #f8fafc !important;
+    color: #0f172a !important;
+  }
+
+  /* Physical Arrears Report Full-Page Landscape Print */
+  body.printing-arrears-view {
+    background: #ffffff !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  body.printing-arrears-view * {
+    visibility: hidden;
+  }
+
+  body.printing-arrears-view #arrears-physical-print-area,
+  body.printing-arrears-view #arrears-physical-print-area * {
+    visibility: visible !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  body.printing-arrears-view #arrears-physical-print-area {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: #ffffff !important;
+    display: block !important;
+    overflow: visible !important;
+  }
+
+  body.printing-arrears-view #arrears-physical-print-area table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    border: 1.5px solid #000000 !important;
+  }
+
+  body.printing-arrears-view #arrears-physical-print-area th,
+  body.printing-arrears-view #arrears-physical-print-area td {
+    border: 1px solid #000000 !important;
+    color: #000000 !important;
+    background: #ffffff !important;
+  }
+
+  /* When printing a modal, isolate and show the modal while hiding background content */
+  body.printing-modal {
+    background: #ffffff !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  body.printing-modal * {
+    visibility: hidden;
+  }
+
+  body.printing-modal #receipt-modal-backdrop,
+  body.printing-modal #receipt-modal-backdrop *,
+  body.printing-modal #subscriber-modal-backdrop,
+  body.printing-modal #subscriber-modal-backdrop *,
+  body.printing-modal #arrears-modal-backdrop,
+  body.printing-modal #arrears-modal-backdrop *,
+  body.printing-modal #printable-receipt,
+  body.printing-modal #printable-receipt *,
+  body.printing-modal #printable-receipt img,
+  body.printing-modal .jivan-logo-img,
+  body.printing-modal img,
+  body.printing-modal #printable-subscriber-statement,
+  body.printing-modal #printable-subscriber-statement *,
+  body.printing-modal #printable-agent-report,
+  body.printing-modal #printable-agent-report *,
+  body.printing-modal #printable-arrears-report,
+  body.printing-modal #printable-arrears-report * {
+    visibility: visible !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Reset modal overlay containers for clean full-page A4 printing */
+  body.printing-modal #receipt-modal-backdrop,
+  body.printing-modal #subscriber-modal-backdrop,
+  body.printing-modal #arrears-modal-backdrop {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    box-shadow: none !important;
+    display: block !important;
+    overflow: visible !important;
+    z-index: 999999 !important;
+  }
+
+  body.printing-modal #receipt-modal-backdrop > div,
+  body.printing-modal #subscriber-modal-backdrop > div,
+  body.printing-modal #arrears-modal-backdrop > div {
+    position: static !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    max-height: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    display: block !important;
+    overflow: visible !important;
+  }
+
+  body.printing-modal #printable-receipt,
+  body.printing-modal #printable-subscriber-statement,
+  body.printing-modal #printable-agent-report,
+  body.printing-modal #printable-arrears-report {
+    position: static !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: #ffffff !important;
+    display: block !important;
+    overflow: visible !important;
+  }
+
+  /* Ensure print tables take full width without fighting for space */
+  table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr {
+    page-break-inside: avoid;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
+
+
+
+

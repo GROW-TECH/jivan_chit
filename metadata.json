@@ -1,0 +1,8 @@
+{
+  "name": "Chit Fund Management System",
+  "description": "Professional Chit Fund Management web application for managing customers, chit groups, monthly installments, payments, auctions, dividends, prize payouts, expenses, and financial reports.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
